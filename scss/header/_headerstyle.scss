@@ -1,0 +1,113 @@
+.header {
+   background-color: #FFFFFF;
+   &__container {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__content {
+      display: flex;
+      align-items: center;
+      padding: 12px 0px;
+   }
+
+   &__logo {
+      flex: 0 0 111px;
+   }
+
+   &__address {
+      flex: 0 0 140px;
+   }
+
+   &__phone {
+      flex: 1 1 auto;      
+   }
+
+   &__button {
+      margin: 0px 0px 0px 35px;
+   }
+
+   &__menu {
+   }
+}
+.address {
+   background: url(../img/header/Spot.svg) 0px 0px no-repeat;
+   padding: 2px 0px 0px 22px;
+
+   &__text-city{
+      display: block;
+      color: #364844;
+      font-family: "PT Sans Caption";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px; 
+   }
+   &__text-name {
+      color: #868686;
+      font-family: "PT Sans Caption";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 18px; 
+   }
+}
+.phone {
+   display: flex;
+   justify-content: end;
+   &__number {
+      padding: 0px 0px 0px 37px;
+      color: #364844;
+      font-family: "PT Sans Caption";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+      background: url("../img/header/whatsapp-icon.svg") left no-repeat;
+   }
+}
+
+.button {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 196px;
+   height: 43px;
+   border-radius: 50px;
+   background-color: #0DBC91;
+   transition: background-color 0.3s ease 0s;
+   &__text{    
+      color: #FFF;
+      font-family: "PT Sans Caption";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+   }
+}
+.button:hover {
+   background-color: #00D29F;
+}
+.menu {
+   padding: 10px 0px;
+   background-color: #1FA181;
+   &__body {
+   }
+
+   &__list {
+      display: flex;
+   }
+
+   &__item {
+      margin: 0px 30px 0px 0px;
+   }
+   &__item:last-child {
+      margin: 0px 0px 0px 0px;
+   }
+
+   &__link {
+      color: #FFF;
+      font-family: "PT Sans Caption";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 150% */
+   }
+}

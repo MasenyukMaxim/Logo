@@ -97,6 +97,109 @@ body {
   padding: 0px 15px;
 }
 
+.header {
+  background-color: #FFFFFF;
+}
+.header__container {
+  display: flex;
+  flex-direction: column;
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  padding: 12px 0px;
+}
+.header__logo {
+  flex: 0 0 111px;
+}
+.header__address {
+  flex: 0 0 140px;
+}
+.header__phone {
+  flex: 1 1 auto;
+}
+.header__button {
+  margin: 0px 0px 0px 35px;
+}
+.address {
+  background: url(../img/header/Spot.svg) 0px 0px no-repeat;
+  padding: 2px 0px 0px 22px;
+}
+.address__text-city {
+  display: block;
+  color: #364844;
+  font-family: "PT Sans Caption";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+.address__text-name {
+  color: #868686;
+  font-family: "PT Sans Caption";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.phone {
+  display: flex;
+  justify-content: end;
+}
+.phone__number {
+  padding: 0px 0px 0px 37px;
+  color: #364844;
+  font-family: "PT Sans Caption";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  background: url("../img/header/whatsapp-icon.svg") left no-repeat;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 196px;
+  height: 43px;
+  border-radius: 50px;
+  background-color: #0DBC91;
+  transition: background-color 0.3s ease 0s;
+}
+.button__text {
+  color: #FFF;
+  font-family: "PT Sans Caption";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.button:hover {
+  background-color: #00D29F;
+}
+
+.menu {
+  padding: 10px 0px;
+  background-color: #1FA181;
+}
+.menu__list {
+  display: flex;
+}
+.menu__item {
+  margin: 0px 30px 0px 0px;
+}
+.menu__item:last-child {
+  margin: 0px 0px 0px 0px;
+}
+.menu__link {
+  color: #FFF;
+  font-family: "PT Sans Caption";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+}
+
 @media (max-width: 1138px) {
   [class*=__container] {
     max-width: 970px;

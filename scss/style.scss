@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 
 @import "../scss/nullstyle/nullstyle.scss";
+@import "../scss/header/headerstyle";
 
 
 
@@ -11,7 +12,7 @@
    [class*="__container"]{
       max-width: 970px;
    }
-
+  
 }
 
 // TABLE
