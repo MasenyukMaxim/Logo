@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+@import "../scss/nullstyle/nullstyle.scss";
+
+
+
+// PC
+
+@media (max-width: 1138px) {
+   [class*="__container"]{
+      max-width: 970px;
+   }
+
+}
+
+// TABLE
+
+@media (max-width: 991.98px) {
+   [class*="__container"]{
+      max-width: 750px;
+   }
+
+}
+
+// MOBILE
+
+@media (max-width: 767.98px) {
+   [class*="__container"]{
+      max-width: none;
+   }
+
+}
+
+// MOBILE SMALL
+
+@media (max-width:479.98px){
+   
+}
