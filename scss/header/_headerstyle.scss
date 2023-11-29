@@ -1,32 +1,38 @@
 .header {
+   position:absolute;
+   width: 100%;
+   top: 0;
+   left: 0;
    background-color: #FFFFFF;
    &__container {
       display: flex;
       flex-direction: column;
    }
-
    &__content {
       display: flex;
       align-items: center;
       padding: 12px 0px;
    }
+   &__menu-button {
 
+   }
    &__logo {
       flex: 0 0 111px;
    }
-
+   &__info-content{
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+   }
    &__address {
       flex: 0 0 140px;
    }
-
    &__phone {
       flex: 1 1 auto;      
    }
-
    &__button {
       margin: 0px 0px 0px 35px;
    }
-
    &__menu {
    }
 }
@@ -81,6 +87,9 @@
       font-style: normal;
       font-weight: 400;
    }
+   &__text_bg{
+
+   }
 }
 .button:hover {
    background-color: #00D29F;
@@ -109,5 +118,176 @@
       font-style: normal;
       font-weight: 400;
       line-height: 24px; /* 150% */
+   }
+}
+
+.button-menu {
+   display: none;
+}
+
+
+// =======================================
+
+@media (max-width: 767.98px) {
+
+   .header{
+      &__logo {
+         margin: 0px 0px 0px 43px;
+         flex: 0 0 70px;
+      }
+      &__logo img {
+         width: 62px;
+         height: 18px;
+      }
+      &__info-content{
+         flex: 1 1 auto;
+         display: flex;
+         flex-direction: column;
+         align-items: end;
+      }
+      &__address {
+         flex: 0 0 auto;
+         order: 2
+      }
+   
+      &__phone {
+         flex: 0 0 auto;  
+         order: 1;    
+      }
+      &__button{
+         background: #F6F6F6;
+         margin: 0px 0px 0px 18px;
+         position: fixed;
+         top:312px;
+         left:-100%;
+         transition: all 0.3s ease 0s;
+      }
+      &__button._active{
+        left: 0;
+        background:#e7e7e7;
+      }
+   }
+   .menu {
+      position: fixed;
+      z-index: -1;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      min-height: 100%;
+      transition: left 0.3s ease 0s;
+      background-color: #1FA181;
+      opacity: 0.8;
+      
+      &__body {
+         padding: 113px 0px 0px 0px;
+      }
+   
+      &__list {
+         display: flex;
+         flex-direction: column;
+      }
+   
+      &__item {
+         margin: 0px 0px 10px 0px;
+      }
+      &__item:last-child {
+         margin: 0;
+      }
+   }
+   .menu._active{
+      left: 0;
+   }
+   .phone {
+      &__number {
+         padding: 0px;
+      }
+   }
+   .button {
+      &__text_bg{
+         color: #1FA181;
+         font-family: "PT Sans Caption";
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 21px; /* 150% */
+      }
+   }
+   .button-menu {
+      display: block;
+      position: relative;
+      z-index: 5;
+      flex: 0 0 30px;
+      height: 21px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & span,
+      &::before,
+      &::after{
+         content: "";
+         background-color: #1FA181;
+         height: 3px;
+      }
+
+      &._active{
+         flex: 0 0 30px;
+         height: 30px;
+         position: relative;
+      }
+      &._active::before,
+      &._active::after{
+         position: absolute;
+         top: 50%;
+         left: 0;
+         width: 100%;
+         background-color: #1FA181;
+         height: 3px;
+      }
+      &._active span{
+         display: none;
+      }
+      &._active::before{
+         transform: rotate(45deg);
+      }
+      &._active::after{
+         transform: rotate(-45deg);
+      }
+   }
+   .address {
+      background: none;
+      padding: 0px;
+      &__text-city{
+         color: #364844;
+         text-align: right;
+         font-family: "PT Sans Caption";
+         font-size: 13px;
+         font-style: normal;
+         font-weight: 400;
+         line-height: normal;
+      }
+      &__text-name {
+         display: none; 
+      }
+   }
+   .phone {
+      display: flex;
+      justify-content: end;
+      &__number {
+         font-family: "PT Sans Caption";
+         font-size: 16px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: normal;
+         background: none;
+      }
+   }
+}
+@media (max-width:359.98px){
+   .header{
+      &__logo {
+         margin: 0px 0px 0px 23px;
+         flex: 0 0 70px;
+      }
    }
 }
