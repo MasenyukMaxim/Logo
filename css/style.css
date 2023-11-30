@@ -92,13 +92,13 @@ body {
 }
 
 [class*=__container] {
-  max-width: 1168px;
+  max-width: 1174px;
   margin: 0px auto;
   padding: 0px 18px;
 }
 
 .header {
-  position: absolute;
+  position: relative;
   width: 100%;
   top: 0;
   left: 0;
@@ -109,6 +109,8 @@ body {
   flex-direction: column;
 }
 .header__content {
+  position: relative;
+  z-index: 5;
   display: flex;
   align-items: center;
   padding: 12px 0px;
@@ -249,10 +251,10 @@ body {
   }
   .menu {
     position: fixed;
-    z-index: -1;
-    top: 0;
+    top: 0px;
     left: -100%;
     width: 100%;
+    z-index: -1;
     min-height: 100%;
     transition: left 0.3s ease 0s;
     background-color: #1FA181;
@@ -288,7 +290,6 @@ body {
   .button-menu {
     display: block;
     position: relative;
-    z-index: 5;
     flex: 0 0 30px;
     height: 21px;
     cursor: pointer;
@@ -356,6 +357,80 @@ body {
   .header__logo {
     margin: 0px 0px 0px 23px;
     flex: 0 0 70px;
+  }
+}
+.first-screen {
+  position: relative;
+  z-index: -2;
+  background: #F8FBFA;
+}
+.first-screen__content {
+  flex: 0 0 100%;
+}
+.first-screen__container {
+  display: flex;
+  align-items: center;
+}
+.first-screen__body {
+  width: 50%;
+  padding: 144px 200px 162px 0px;
+}
+.first-screen__title {
+  color: #364844;
+  font-family: "PT Sans Caption";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0px 0px 14px 0px;
+}
+.first-screen__text {
+  color: #364844;
+  font-family: "PT Sans Caption";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+.first-screen__image img {
+  max-width: 100%;
+}
+
+@media (min-width: 767.98px) {
+  .first-screen {
+    display: flex;
+  }
+  .first-screen__image {
+    flex: 0 0 50%;
+    transform: translate(-100%, 0);
+  }
+}
+@media (min-width: 767.98px) {
+  .first-screen__image {
+    position: relative;
+    padding: 0 0 28.3% 0;
+  }
+  .first-screen__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media (max-width: 1138px) {
+  .first-screen__body {
+    padding: 144px 100px 162px 0px;
+  }
+}
+@media (max-width: 991.98px) {
+  .first-screen__title {
+    font-size: 26px;
+  }
+  .first-screen__text {
+    font-size: 14px;
   }
 }
 @media (max-width: 1138px) {

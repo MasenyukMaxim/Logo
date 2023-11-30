@@ -1,5 +1,5 @@
 .header {
-   position:absolute;
+   position:relative;
    width: 100%;
    top: 0;
    left: 0;
@@ -9,9 +9,12 @@
       flex-direction: column;
    }
    &__content {
+      position: relative;
+      z-index: 5;
       display: flex;
       align-items: center;
       padding: 12px 0px;
+
    }
    &__menu-button {
 
@@ -169,10 +172,10 @@
    }
    .menu {
       position: fixed;
-      z-index: -1;
-      top: 0;
+      top: 0px;
       left: -100%;
       width: 100%;
+      z-index: -1;
       min-height: 100%;
       transition: left 0.3s ease 0s;
       background-color: #1FA181;
@@ -215,7 +218,6 @@
    .button-menu {
       display: block;
       position: relative;
-      z-index: 5;
       flex: 0 0 30px;
       height: 21px;
       cursor: pointer;
