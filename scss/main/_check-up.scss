@@ -16,7 +16,7 @@
    }
 
    &__content {
-      flex: 0 0 40%;
+      width: 40%;
       padding: 0px 0px 0px 63px;
    }
 
@@ -49,11 +49,9 @@
 
    &__buttons {
       display: flex;
-
    }
 
    &__button {
-
       &_white{
          border: 1px solid #0DBC91;
          color: #0DBC91;
@@ -75,8 +73,8 @@
       width: 60%;
    }
    &__image img {
-      width: 100%;
-      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
       object-fit: cover;
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
       clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%);
@@ -192,7 +190,129 @@
    }
 
 }
+// =============================
 
+@media (max-width: 1138px) {
+   .services {
+      margin: 0px 0px 25px 0px;
+   }
+   .prices {
+      margin: 0px 0px 16px 0px;
+   }
+}
+
+@media (max-width: 991.98px) {
+   .check-up {
+      &__title {
+         font-size: 26px;
+         margin:0px;
+      }
+   
+      &__text {
+         font-size: 14px;
+         margin: 0px 0px 10px 0px;
+      }
+   }
+   .services {
+      margin: 0px 0px 10px 0px;
+
+      &__name {
+         font-size: 14px;
+         margin: 0px 0px 6px 0px;
+      }
+   }
+   .prices {
+      margin: 0px 0px 10px 0px;
+      &__price-now {
+         font-size: 18px;
+         margin: 0px 16px 0px 0px;
+      }
+   
+      &__price-before {
+         font-size: 14px;
+      }
+   }
+}
+@media (max-width: 767.98px) {
+   .check-up {
+      padding: 49px 0px 35px 0px;
+      &__item {
+         flex-direction: column;
+         background-color: transparent;
+      }
+      &__content {
+         order: 2;
+         width: 100%;
+         flex: 0 1 auto;
+         padding: 23px 0px 42px 22px;
+         border-radius: 0px 0px 5px 5px;
+         background-color:#E2F0EF;
+      }
+   
+      &__image {
+         flex: 0 1 auto;
+         order: 1;
+         width: 100%;
+      }
+      &__image img {
+         border-radius: 5px 5px 0px 0px;
+         max-width: 100%;
+         max-height: 100%;
+         object-fit: cover;
+         -webkit-clip-path: none;
+         clip-path: none;
+      }
+      &__button {
+         width: 137px;
+         &_white{
+            border: 1px solid #0DBC91;
+            color: #0DBC91;
+            background: #ffffff00;
+            transition: all 0.3s ease 0s;
+            margin: 0px 0px 0px 6px;
+         }
+         &_white:hover{
+            background: #0DBC91;
+            color: #FFFFFF;
+         }
+      }
+      &__title {
+         font-size: 26px;
+         margin:0px;
+      }
+   
+      &__text {
+         font-size: 14px;
+         margin: 0px 0px 12px 0px;
+      }
+   }
+   
+   .services {
+      margin: 0px 0px 17px 0px;
+      &__name {
+         font-size: 14px;
+         margin: 0px 0px 7px 0px;
+      }
+   }
+   .prices {
+      margin: 0px 0px 17px 0px;
+      &__price-now {
+         font-size: 18px;
+         margin: 0px 6px 0px 0px;
+      }
+   
+      &__price-before {
+         font-size: 14px;
+      }
+   }
+}
+@media (max-width: 359.98px){
+   .check-up {
+      &__button {
+         width: 110px;
+      }
+   }
+}
 
 
 
