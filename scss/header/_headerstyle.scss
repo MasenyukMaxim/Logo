@@ -1,8 +1,9 @@
 .header {
-   position:relative;
+   position:fixed;
    width: 100%;
    top: 0;
    left: 0;
+   z-index: 50;
    background-color: #FFFFFF;
    &__container {
       display: flex;
@@ -38,6 +39,16 @@
    }
    &__menu {
    }
+}
+.header:before {
+   content: " ";
+   position: absolute;
+   top: 0;
+   left:0;
+   width: 100%;
+   height: 100%;
+   background-color:#FFF;
+   z-index: 3;
 }
 .address {
    background: url(../img/header/Spot.svg) 0px 0px no-repeat;
@@ -82,22 +93,20 @@
    height: 43px;
    border-radius: 50px;
    background-color: #0DBC91;
-   transition: background-color 0.3s ease 0s;
-   &__text{    
-      color: #FFF;
-      font-family: "PT Sans Caption";
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 400;
-   }
-   &__text_bg{
-
-   }
+   transition: all 0.3s ease 0s;
+   color: #FFF;
+   font-family: "PT Sans Caption";
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 400;
 }
-.button:hover {
+.button:hover{
    background-color: #00D29F;
 }
+
 .menu {
+   position: relative;
+   z-index: 4;
    padding: 10px 0px;
    background-color: #1FA181;
    &__body {
@@ -164,6 +173,12 @@
          top:312px;
          left:-100%;
          transition: all 0.3s ease 0s;
+         color: #1FA181;
+         font-family: "PT Sans Caption";
+         font-size: 14px;
+         font-style: normal;
+         font-weight: 700;
+         line-height: 21px; /* 150% */
       }
       &__button._active{
         left: 0;
@@ -203,16 +218,6 @@
    .phone {
       &__number {
          padding: 0px;
-      }
-   }
-   .button {
-      &__text_bg{
-         color: #1FA181;
-         font-family: "PT Sans Caption";
-         font-size: 14px;
-         font-style: normal;
-         font-weight: 700;
-         line-height: 21px; /* 150% */
       }
    }
    .button-menu {

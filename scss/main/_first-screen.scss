@@ -1,9 +1,9 @@
 .first-screen {
-   position: relative;
-   z-index: -2;
+   margin: 110px 0px 0px 0px;
    background: #F8FBFA;
    &__content {
       flex: 0 0 100%;
+      display: flex;
    }
 
    &__container {
