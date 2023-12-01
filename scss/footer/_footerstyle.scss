@@ -1,0 +1,48 @@
+.footer {
+   background-color: #08664F;
+   padding: 55px 0;
+   &__container {
+      display: flex;
+      align-items: center;
+   }
+
+   &__logo {
+      flex: 0 1 auto;
+   }
+
+   &__menu {
+      flex: 1 1 auto;
+   }
+   &__menu nav {
+      display: flex;
+      justify-content: center;
+   }
+
+
+   &__link-items {
+      flex: 0 1 auto;
+   }
+
+   &__link-item {
+      margin: 0px 0px 0px 15px;
+   }
+   &__link-item:first-child {
+      margin:0px;
+   }
+   
+}
+.menu {
+
+   &__body {
+
+   }
+
+   &__list {
+   }
+
+   &__item {
+   }
+
+   &__link {
+   }
+}

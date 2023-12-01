@@ -38,6 +38,10 @@
       margin: 0px 0px 0px 35px;
    }
    &__menu {
+      position: relative;
+      z-index: 3;
+      background-color: #1FA181;
+      padding: 10px 0px;
    }
 }
 .header:before {
@@ -105,13 +109,8 @@
 }
 
 .menu {
-   position: relative;
-   z-index: 4;
-   padding: 10px 0px;
-   background-color: #1FA181;
    &__body {
    }
-
    &__list {
       display: flex;
    }
@@ -161,7 +160,6 @@
          flex: 0 0 auto;
          order: 2
       }
-   
       &__phone {
          flex: 0 0 auto;  
          order: 1;    
@@ -184,36 +182,38 @@
         left: 0;
         background:#e7e7e7;
       }
+      &__menu{
+         position: fixed;
+         top: 0px;
+         left: -100%;
+         width: 100%;
+         z-index: 0;
+         min-height: 100%;
+         transition: left 0.3s ease 0s;
+         background-color: #1FA181;
+         opacity: 0.8;
+      }
+      &__menu._active{
+         left: 0;
+      }
    }
    .menu {
-      position: fixed;
-      top: 0px;
-      left: -100%;
-      width: 100%;
-      z-index: -1;
-      min-height: 100%;
-      transition: left 0.3s ease 0s;
-      background-color: #1FA181;
-      opacity: 0.8;
       
-      &__body {
+      &__body_header {
          padding: 113px 0px 0px 0px;
       }
    
-      &__list {
+      &__list_header {
          display: flex;
          flex-direction: column;
       }
    
-      &__item {
+      &__item_header {
          margin: 0px 0px 10px 0px;
       }
       &__item:last-child {
          margin: 0;
       }
-   }
-   .menu._active{
-      left: 0;
    }
    .phone {
       &__number {
