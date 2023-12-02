@@ -489,7 +489,18 @@ body._lock {
   flex-direction: column;
   align-items: center;
 }
+.check-up__slider {
+  max-width: 100%;
+  overflow: hidden;
+}
+.check-up__items {
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
 .check-up__item {
+  flex: 0 0 100%;
   display: flex;
   align-items: center;
   background-color: #E2F0EF;
@@ -700,13 +711,13 @@ body._lock {
     background-color: #E2F0EF;
   }
   .check-up__image {
-    flex: 0 1 auto;
+    flex: 0 1 100%;
     order: 1;
     width: 100%;
   }
   .check-up__image img {
     border-radius: 5px 5px 0px 0px;
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
