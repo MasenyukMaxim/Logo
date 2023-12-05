@@ -75,10 +75,6 @@
       }
    }
 
-   &__bg {
-      display: none;
-   }
-
    &__image {
       width: 60%;
    }
@@ -162,6 +158,7 @@
          left: 0;
          opacity: 0;
          transition:all 0.3s ease 0s;
+         cursor: pointer;
       }
       &_green:hover{
          opacity: 1;
@@ -180,6 +177,7 @@
          left: 0; 
          opacity: 0;
          transition:all 0.3s ease 0s;
+         cursor: pointer;
       }
       &_green:hover{
          opacity: 1;

@@ -17,7 +17,7 @@
                   <span></span>
                </div>
                <a href="" class="header__logo">
-                  <img src="/img/header/LOGO.svg" alt="Логотип">
+                  <img src="img/header/LOGO.svg" alt="Логотип">
                </a>
                <div class="header__info-content">
                   <a href="" class="header__address address">
@@ -28,7 +28,7 @@
                      <a href="" class="phone__number">+7(863) 000 00 00</a>
                   </div>
                </div>
-               <a href="" class="header__button button ">Записаться на прием</a>
+               <a class="header__button button">Записаться на прием</a>
             </div>
          </div>
          <div class="header__menu menu">
@@ -92,8 +92,8 @@
                                  3500₽</div>
                            </div>
                            <div class="check-up__buttons">
-                              <a href="" class="check-up__button button">Записаться</a>
-                              <a href="" class="check-up__button check-up__button_white button">Подробнее</a>
+                              <a class="check-up__button button">Записаться</a>
+                              <a class="check-up__button check-up__button_white button">Подробнее</a>
                            </div>
                         </div>
                         <div class="check-up__image">
@@ -123,8 +123,8 @@
                                  3500₽</div>
                            </div>
                            <div class="check-up__buttons">
-                              <a href="" class="check-up__button button">Записаться</a>
-                              <a href="" class="check-up__button check-up__button_white button">Подробнее</a>
+                              <a class="check-up__button button work">Записаться</a>
+                              <a class="check-up__button check-up__button_white button">Подробнее</a>
                            </div>
                         </div>
                         <div class="check-up__image">
@@ -154,8 +154,8 @@
                                  3500₽</div>
                            </div>
                            <div class="check-up__buttons">
-                              <a href="" class="check-up__button button">Записаться</a>
-                              <a href="" class="check-up__button check-up__button_white button">Подробнее</a>
+                              <a class="check-up__button button">Записаться</a>
+                              <a class="check-up__button check-up__button_white button">Подробнее</a>
                            </div>
                         </div>
                         <div class="check-up__image">
@@ -185,8 +185,8 @@
                                  3500₽</div>
                            </div>
                            <div class="check-up__buttons">
-                              <a href="" class="check-up__button button">Записаться</a>
-                              <a href="" class="check-up__button check-up__button_white button">Подробнее</a>
+                              <a class="check-up__button button">Записаться</a>
+                              <a class="check-up__button check-up__button_white button">Подробнее</a>
                            </div>
                         </div>
                         <div class="check-up__image">
@@ -244,6 +244,29 @@
             </div>
          </div>
       </footer>
+      <div class="popup">
+         <div class="popup__form form">
+            <div class="popup__close">
+               <div class="popup__close-button button"></div>
+            </div>
+            <form action="/php/index.php" id="form" class="form__body">
+               <div class="form__title">Отправка на почту</div>
+               <div class="form__item">
+                  <label for="formName" class="form__label">Имя*:</label>
+                  <input id="formName" type="text" name="name" class="form__input _req">
+               </div>
+               <div class="form__item">
+                  <label for="formEmail" class="form__label">E-mail*:</label>
+                  <input id="formEmail" type="text" name="email" class="form__input _req _email">
+               </div>
+               <div class="form__item">
+                  <label for="formMessage" class="form__label">Сообщение:</label>
+                  <textarea name="message" id="formMessage" class="form__input"></textarea>
+               </div>
+               <button type="submit" class="form__button button">Отправить</button>
+            </form>
+         </div>
+      </div>
    </div>
    <script src="js/script.js"></script>
 </body>
